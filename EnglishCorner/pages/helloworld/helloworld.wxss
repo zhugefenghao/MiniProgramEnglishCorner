@@ -1,0 +1,92 @@
+page {
+    font-size: 10px;
+    color: #333
+}
+.title {
+  font-size: 17px;
+  text-align: center;
+}
+.table {
+    border:1px solid #dadada;
+    border-right: 0;
+    border-bottom: 0;
+    width: 98%;
+}
+.tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.th,.td {
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    text-align: center;
+    width:100%
+}
+.th {
+    font-weight: 400;
+    background-color: #dadada
+}
+
+.day {
+  width: 5%
+}
+
+.date {
+  width: 25%
+}
+
+.user {
+  width: 70%
+}
+
+.latestDay {
+  background-color: lightgreen
+}
+
+.nav{width:100%;height:100rpx;display:flex;flex-direction:row;}
+.default{line-height:100rpx;text-align:center;flex:1;border-right:1px solid gainsboro;color:#000;font-weight:bold;font-size:28rpx;}
+.red{line-height:100rpx;text-align:center;color:#fc5558;flex:1;border-right:1px solid gainsboro;font-weight:bold;font-size:28rpx;}
+.show{display:block;}
+.hidden{display:none;}
+
+.titleview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10rpx;  
+  margin-right: 10rpx;
+}
+
+.btn {
+  font-size: 8pt  !important;
+  /* background-color: #FFCC00; */
+  color: black;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.inputview {
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 10rpx;  
+  margin-right: 10rpx;
+}
+
+.lessontitle {
+  font-size: 11pt !important;
+  font-weight: bold !important;
+}
+
+.add {
+  width: 100%;
+  margin-top: 10rpx;
+  border: 2px solid #d0d0d0;  
+  border-radius: 20rpx;  
+  font-weight: bold !important;
+  font-size: 11pt !important;
+}

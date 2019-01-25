@@ -1,0 +1,64 @@
+<view class="body">
+ <view class="nav bc_white">
+  <view class="{{selected?'red':'default'}}" bindtap="selected">Schedule</view>
+  <view class="{{selected1?'red':'default'}}" bindtap="selected1">Vocabulary</view>
+ </view>
+ <view class="{{selected?'show':'hidden'}}">
+  <view class='title'>English Corner</view>
+  <view class="container">
+      <view class="table">
+          <view class="tr">
+              <view class="th day">Day</view>
+              <view class="th date">Date</view>
+              <view class="th user">Participators</view>
+          </view>
+          <view class="tr" wx:for="{{dateResults.days}}" wx:for-item="item" wx:key="index">
+            <view class="td day" class="{{dateResults.latestDate == dateResults.dates[index]?'td latestDay day':'td day'}}">
+              {{dateResults.days[index]}}
+            </view>
+            <view class="td date" class="{{dateResults.latestDate == dateResults.dates[index]?'td latestDay date':'td date'}}">
+              {{dateResults.dates[index]}}
+            </view>
+            <view class="td user" class="{{dateResults.latestDate == dateResults.dates[index]?'td latestDay user':'td user'}}">
+              {{dateResults.participators[index]}}
+            </view>
+          </view>
+      </view>
+  </view>
+ </view>
+
+
+
+  <view class="{{selected1?'show':'hidden'}}">
+      <view wx:for="{{lessonWords}}" wx:for-item="item" wx:key="index">
+          <form bindsubmit='save' id="{{item.lessonid}}">
+          <view class="titleview">
+            <view class="lessontitle">Lesson {{index+1}}</view>
+            <view class="btnview">
+                        <button class='btn' bindtap="edit" size="mini" type="default" id="{{index}}" disabled="{{editableid==index||editableid==-1?false:true}}">Edit</button>
+                        <button class='btn' bindtap="cancel" size="mini" type="default"  id="{{index}}" disabled="{{editableid==index||editableid==-1?false:true}}">Cancel</button>
+                        <button class='btn' formType="submit"size="mini" type="default" id="{{index}}" disabled="{{editableid==index||editableid==-1?false:true}}">Save</button>
+            </view>
+
+          </view>
+          <view class='inputview'>
+              <textarea name="textarea" class="input" value="{{item.words}}" maxlength="-1" show-confirm-bar="false" disabled="{{editableid==index?false:true}}" focus="{{editableid==index?true:false}}" bindblur='bindTextArea' style="height:50px;font-size:15px"  id="{{index}}"></textarea>
+          </view>
+          </form>
+      </view>
+  </view>
+  <button class='add' size="mini" type="default" bindtap="add"  disabled="{{editableid==index||editableid==-1?false:true}}">+</button>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
